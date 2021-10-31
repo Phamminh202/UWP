@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="T2010A.Laps1.B1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:T2010A.Laps1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <FlyoutBase.AttachedFlyout>
+            <MenuFlyout/>
+        </FlyoutBase.AttachedFlyout>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*" />
+            <ColumnDefinition Width="2*" />
+
+       </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" VerticalAlignment="Center" >
+            <TextBox x:Name="emailtext" Margin="20"  TextWrapping="Wrap" HorizontalAlignment="Center" Width="450" Height="32" PlaceholderText="Email"/>
+            <TextBox x:Name="tieudetext" Margin="20"  TextWrapping="Wrap" HorizontalAlignment="Center" Width="450" Height="32" PlaceholderText="Tiêu đề"/>
+            <TextBox x:Name="noidungtext" Margin="20"  TextWrapping="Wrap" HorizontalAlignment="Center" Width="450" Height="32" PlaceholderText="Nôi dung"/>
+            <Button Click="Button_Click" Content="Send" Margin="20" HorizontalAlignment="Center" />
+        </StackPanel>
+        <StackPanel VerticalAlignment="Center" Padding="0 0 0 90" Grid.Column="1">
+            <TextBox Text="Thư đã gửi" TextWrapping="Wrap" BorderBrush="Black"/>
+            <TextBlock Text="1" x:Name="txtemail" TextWrapping="Wrap"  Margin="20" FontSize="20"/>
+            <TextBlock Text="2" x:Name="txttieude" TextWrapping="Wrap"  Margin="20" FontSize="20"/>
+            <TextBlock Text="3" x:Name="txtnoidung" TextWrapping="Wrap"  Margin="20" FontSize="20" MaxLines="2"/>
+
+        </StackPanel>
+    </Grid>
+</Page>
