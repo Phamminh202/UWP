@@ -31,5 +31,27 @@ namespace BaiThi2
         {
             next.Navigate(typeof(MainPage));
         }
+
+        private void Check(object sender, RoutedEventArgs e)
+        {
+            string message = "You did not enter a server name. Cancel this operation?";
+            string caption = "No Server Name Specified";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result;
+
+            // Displays the MessageBox.
+
+            result = MessageBox.Show(this, message, caption, buttons,
+                MessageBoxIcon.Question, MessageBoxDefaultButton.Button1,
+                MessageBoxOptions.RightAlign);
+
+            if (result == DialogResult.Yes)
+            {
+
+                // Closes the parent form.
+
+                this.Close();
+            }
+        }
     }
 }

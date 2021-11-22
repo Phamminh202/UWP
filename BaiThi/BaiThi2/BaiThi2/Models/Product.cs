@@ -8,5 +8,7 @@ namespace BaiThi2.Models
 {
     class Product
     {
+        public string Name { get; set; }
+        public string Pasword { get; set; }
     }
 }

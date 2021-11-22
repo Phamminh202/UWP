@@ -12,6 +12,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using BaiThi2.Service;
+using BaiThi2.Models;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -29,6 +31,14 @@ namespace BaiThi2
 
         private void To_Login(object sender, RoutedEventArgs e)
         {
+            next.Navigate(typeof(Login));
+        }
+
+        private void Create(object sender, RoutedEventArgs e)
+        {
+            Product item = new Product() { Name = username.Text, Pasword = password.Password};
+            ItemService service = new ItemService();
+            service.AddNew(item);
             next.Navigate(typeof(Login));
         }
     }

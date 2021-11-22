@@ -48,3 +48,10 @@ E:\VisualDocument\Kì3_UWP\BaiThi2\BaiThi2\obj\x86\Debug\Login.g.i.cs
 E:\VisualDocument\Kì3_UWP\BaiThi2\BaiThi2\obj\x86\Debug\Login.g.cs
 E:\VisualDocument\Kì3_UWP\BaiThi2\BaiThi2\obj\x86\Debug\Login.xaml
 E:\VisualDocument\Kì3_UWP\BaiThi2\BaiThi2\obj\x86\Debug\Login.xbf
+E:\VisualDocument\Kì3_UWP\BaiThi2\BaiThi2\bin\x86\Debug\SQLitePCL.Ext.dll
+E:\VisualDocument\Kì3_UWP\BaiThi2\BaiThi2\bin\x86\Debug\SQLitePCL.Ext.pri
+E:\VisualDocument\Kì3_UWP\BaiThi2\BaiThi2\bin\x86\Debug\SQLitePCL.dll
+E:\VisualDocument\Kì3_UWP\BaiThi2\BaiThi2\obj\x86\Debug\SQLitePCL\en\SQLitePCL.Resources.resw
+E:\VisualDocument\Kì3_UWP\BaiThi2\BaiThi2\obj\x86\Debug\resources.en.resfiles
+E:\VisualDocument\Kì3_UWP\BaiThi2\BaiThi2\obj\x86\Debug\resources.en.resfiles.intermediate
+E:\VisualDocument\Kì3_UWP\BaiThi2\BaiThi2\obj\x86\Debug\SQLitePCL.Ext.pri.xml

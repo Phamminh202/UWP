@@ -15,6 +15,7 @@ namespace BaiThi2.Service
             List<Product> GetCart();
 
             bool AddNew(Product item);
+            bool CheckItem(Product item);
         }
         class ItemService : IItemService
         {
@@ -23,7 +24,7 @@ namespace BaiThi2.Service
                 try
                 {
                     SQLiteConnection connection = SQLiteHelper.GetInstance().SQLiteConnection;
-                    var sql_txt = "insert into Customer(Name,Password) value(?,?)";
+                    var sql_txt = "insert into User(Name,Password) value(?,?)";
 
                     var statement = connection.Prepare(sql_txt);
                     statement.Bind(1, item.Name);
@@ -35,16 +36,34 @@ namespace BaiThi2.Service
                 {
                     return false;
                 }
-                //throw new NotImplementedException();
             }
 
-            public List<Product> GetCart()
+        public bool CheckItem(Product item)
+        {
+            try
+            {
+                SQLiteConnection connection = SQLiteHelper.GetInstance().SQLiteConnection;
+                var sql_txt = "select * from User where Name = ?,Password = ?";
+
+                var statement = connection.Prepare(sql_txt);
+                statement.Bind(1, item.Name);
+                statement.Bind(2, item.Pasword);
+                var rs = statement.Step();
+                return rs == SQLiteResult.OK;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
+
+        public List<Product> GetCart()
             {
                 List<Product> cart = new List<Product>();
                 try
                 {
                     SQLiteConnection connection = SQLiteHelper.GetInstance().SQLiteConnection;
-                    var sql_txt = "select * from Customer";
+                    var sql_txt = "select * from User";
                     var statement = connection.Prepare(sql_txt);
                     while (SQLiteResult.ROW == statement.Step())
                     {

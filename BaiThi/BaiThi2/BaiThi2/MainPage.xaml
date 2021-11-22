@@ -35,7 +35,7 @@
                     <ColumnDefinition Width="1*" />
                 </Grid.ColumnDefinitions>
                 <Button Content="Login" Background="Gainsboro" Foreground="Blue" Margin="0 10 0 10" HorizontalAlignment="Center" Grid.Column="0" Click="To_Login"/>
-                <Button Content="Submit" Background="Blue" Foreground="White" Margin="0 10 0 10" HorizontalAlignment="Center" Width="100" Grid.Column="1"/>
+                <Button Content="Submit" Background="Blue" Foreground="White" Margin="0 10 0 10" HorizontalAlignment="Center" Width="100" Grid.Column="1" Click="Create"/>
             </Grid>
 
         </StackPanel>
